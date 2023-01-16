@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./assets/image/screenshot.png" alt="screenshot" width="80%"  height="80%" />
+  <img src="./assets/images/screenshot.png" alt="screenshot" width="80%"  height="80%" />
   <h3><b>Awesome Books Screenshot</b></h3>
 </div>
 
@@ -33,7 +33,7 @@
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-**Awesome Books** is a web page where the user can see a list with awesome books, they can also add or remove any book to the list. Awesome Books has refactored the JavaScript code with ES6 modules to make it more modular.
+**Awesome Books** is a web page where the user can see a list with awesome books, they can also add or remove any book to the list. Awesome Books' JavaScript code has been refactored with ES6 modules to make it more modular.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -131,7 +131,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **We will add 2 more pages to improve the user experience while navigating the web.**
+- [ ] **None planned**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
