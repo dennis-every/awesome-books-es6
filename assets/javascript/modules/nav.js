@@ -1,8 +1,10 @@
-import { booksSection, addBookSection, contactSection } from '../index.js';
-
 export const listLink = document.getElementById('listLink');
 export const addBookLink = document.getElementById('addBookLink');
 export const contactLink = document.getElementById('contactLink');
+
+export const contactSection = document.getElementById('contact-section');
+export const addBookSection = document.getElementById('form_section');
+export const booksSection = document.getElementById('books_section');
 
 export function listHandler(event) {
   event.preventDefault();
