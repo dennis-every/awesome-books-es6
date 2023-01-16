@@ -2,6 +2,7 @@ import {
   listLink, addBookLink, contactLink,
   listHandler, addBookHandler, contactHandler,
 } from './modules/nav.js';
+import setDateTime from './modules/setDateTime.js';
 
 const booksList = document.getElementById('books_list');
 const bookForm = document.getElementById('booksForm');
@@ -10,7 +11,7 @@ export const contactSection = document.getElementById('contact-section');
 export const addBookSection = document.getElementById('form_section');
 export const booksSection = document.getElementById('books_section');
 
-const dateElement = document.getElementById('date');
+export const dateElement = document.getElementById('date');
 
 let booksArray = [];
 
@@ -115,10 +116,6 @@ function loadBooks() {
   booksArray.forEach((book) => {
     appendBookToDOM(book);
   });
-}
-
-function setDateTime() {
-  dateElement.innerHTML = new Date().toLocaleString();
 }
 
 window.onload = () => {
