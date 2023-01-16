@@ -3,7 +3,8 @@ import {
   listHandler, addBookHandler, contactHandler,
 } from './modules/nav.js';
 import setDateTime from './modules/setDateTime.js';
-import { retrieveData, storeData } from './modules/handleData.js';
+import { retrieveData } from './modules/handleData.js';
+import Book from './modules/book.js';
 
 const booksList = document.getElementById('books_list');
 const bookForm = document.getElementById('booksForm');
@@ -15,26 +16,6 @@ export const booksSection = document.getElementById('books_section');
 export const dateElement = document.getElementById('date');
 
 let booksArray = [];
-
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-    this.id = Math.random();
-  }
-
-  static addBook(book) {
-    const newBook = new Book(book.title, book.author);
-    booksArray.push(newBook);
-    storeData(booksArray);
-    window.location.reload();
-  }
-
-  static removeBook(book) {
-    booksArray = booksArray.filter((e) => e.id !== book.id);
-    storeData(booksArray);
-  }
-}
 
 const removeBookFromDOM = (book) => {
   const removeBtn = document.getElementById(book.id);
