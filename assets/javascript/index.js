@@ -3,6 +3,7 @@ import {
   listHandler, addBookHandler, contactHandler,
 } from './modules/nav.js';
 import setDateTime from './modules/setDateTime.js';
+import { retrieveData, storeData } from './modules/handleData.js';
 
 const booksList = document.getElementById('books_list');
 const bookForm = document.getElementById('booksForm');
@@ -14,23 +15,6 @@ export const booksSection = document.getElementById('books_section');
 export const dateElement = document.getElementById('date');
 
 let booksArray = [];
-
-let availableStorage;
-
-function retrieveData() {
-  const data = availableStorage.getItem('books');
-  const parseData = JSON.parse(data);
-  if (parseData) {
-    booksArray = parseData;
-  }
-}
-
-function storeData(booksArray) {
-  if (availableStorage) {
-    const jsonData = JSON.stringify(booksArray);
-    availableStorage.setItem('books', jsonData);
-  }
-}
 
 class Book {
   constructor(title, author) {
@@ -50,29 +34,6 @@ class Book {
     booksArray = booksArray.filter((e) => e.id !== book.id);
     storeData(booksArray);
   }
-}
-
-// Check if local storage available
-function storageAvailable(type) {
-  let storage;
-  try {
-    storage = window[type];
-    const x = '__storage_test__';
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  } catch (e) {
-    return (
-      e instanceof DOMException && (e.code === 22 || e.code === 1014 || e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') && storage && storage.length !== 0);
-  }
-}
-
-if (storageAvailable('localStorage')) {
-  // Yippee! We can use localStorage awesomeness
-  availableStorage = window.localStorage;
-} else {
-  // Too bad, no localStorage for us
-  availableStorage = null;
 }
 
 const removeBookFromDOM = (book) => {
@@ -120,7 +81,7 @@ function loadBooks() {
 
 window.onload = () => {
   booksSection.classList.add('visible');
-  retrieveData();
+  booksArray = retrieveData();
   loadBooks();
   setDateTime();
 };
