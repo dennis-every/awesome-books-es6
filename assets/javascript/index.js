@@ -1,8 +1,7 @@
+import { listLink, addBookLink, contactLink } from './modules/nav.js';
+
 const booksList = document.getElementById('books_list');
 const bookForm = document.getElementById('booksForm');
-const listLink = document.getElementById('listLink');
-const addBookLink = document.getElementById('addBookLink');
-const contactLink = document.getElementById('contactLink');
 
 const contactSection = document.getElementById('contact-section');
 const addBookSection = document.getElementById('form_section');
