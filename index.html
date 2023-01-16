@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/stylesheets/index.css" />
+    <title>Awesome Books</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <h2 class="navbar_logo">Awesome Books</h2>
+        <ul class="navbar_items">
+          <li class="nav_item"><a href="" id="listLink">List</a></li>
+          <li class="nav_item"><a href="" id="addBookLink">Add new</a></li>
+          <li class="nav_item"><a href="" id="contactLink">Contact</a></li>
+        </ul>
+      </nav>
+      <p id="date">March 19th 2023, 9:53:50am</p>
+    </header>
+
+    <main id="main">
+      <section id="books_section">
+        <h1 class="head_title">All awesome books</h1>
+        <ul id="books_list" class="book_list"></ul>
+      </section>
+
+      <section id="form_section" class="form_section not-visible">
+        <form class="form" action="post" id="booksForm">
+          <h2 class="form_title">Add a new book</h2>
+          <input
+            class="form_input"
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+          />
+          <br />
+          <br />
+          <input
+            class="form_input"
+            type="text"
+            name="author"
+            id="author"
+            placeholder="Author"
+          />
+          <br />
+          <br />
+          <button type="submit" id="addBooksBtn" class="form_button">
+            Add
+          </button>
+        </form>
+      </section>
+
+      <section id="contact-section" class="not-visible">
+        <header>
+          <h2>Contact information</h2>
+        </header>
+        <article id="contact-header-article">
+          <p>Do you have any questions or you just want to say "Hello"?</p>
+          <p>You can reach out to us!</p>
+        </article>
+        <article id="contact-items-article">
+          <ul id="contact-items-list">
+            <li>Our email: mail@mail.com</li>
+            <li>Our phone number: 0043586534422</li>
+            <li>Our address: Streetname 22, 84503 City, Country</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">Copyright ...</div>
+      <div class="footer_bar"></div>
+    </footer>
+    <script type="module" src="./assets/javascript/index.js"></script>
+  </body>
+</html>

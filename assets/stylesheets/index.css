@@ -1,0 +1,180 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  animation: animation 40s ease-in-out 0s infinite alternate forwards;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: solid black 2px;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.navbar_items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav_item {
+  border-right: solid black 2px;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.nav_item:last-child {
+  border-right: none;
+}
+
+.nav_item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#date {
+  text-align: right;
+  margin: 1rem;
+}
+
+.head_title {
+  margin: 30px;
+}
+
+.book_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  border: solid black 2px;
+  margin-left: calc(50% - 302.5px);
+}
+
+.book_item {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  position: relative;
+}
+
+.book_item:nth-child(odd) {
+  background: rgb(206, 206, 206);
+}
+
+span {
+  margin-left: 3%;
+}
+
+.remove {
+  position: absolute;
+  right: 4%;
+  padding: 0.5%;
+  box-shadow: 3px 4px #000;
+  cursor: pointer;
+}
+
+.form_section {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.form_title {
+  margin-bottom: 4rem;
+}
+
+.form_input {
+  height: 25px;
+  width: 100%;
+  max-width: 300px;
+  padding: 1%;
+}
+
+.form_button {
+  padding: 0.5%;
+  box-shadow: 3px 4px #000;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  width: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  padding: 1rem;
+  border: solid black 2px;
+  text-align: left;
+  margin: 0.2rem;
+}
+
+.footer_bar {
+  border: solid black 2px;
+  height: 40px;
+  width: 100%;
+  background-color: silver;
+}
+
+#contact-section {
+  margin-top: 5rem;
+  text-align: left;
+  margin-left: calc(50% - 250px);
+}
+
+#contact-section h2 {
+  margin-bottom: 3rem;
+}
+
+#contact-section p {
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+#contact-items-article {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+#contact-items-article li {
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.not-visible {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+#books_section {
+  display: flex;
+  flex-direction: column;
+}
