@@ -14,6 +14,7 @@ const storageAvailable = (type) => {
 };
 
 let availableStorage;
+let books = [];
 
 if (storageAvailable('localStorage')) {
   // Yippee! We can use localStorage awesomeness
@@ -24,8 +25,11 @@ if (storageAvailable('localStorage')) {
 }
 
 export const retrieveData = () => {
-  const data = availableStorage.getItem('books');
-  return JSON.parse(data);
+  if (availableStorage.getItem('books')) {
+    const booksData = availableStorage.getItem('books');
+    books = JSON.parse(booksData);
+  }
+  return books;
 };
 
 export const storeData = (booksArray) => {
