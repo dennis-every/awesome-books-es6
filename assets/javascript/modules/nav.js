@@ -6,7 +6,7 @@ export const contactSection = document.getElementById('contact-section');
 export const addBookSection = document.getElementById('form_section');
 export const booksSection = document.getElementById('books_section');
 
-export function listHandler(event) {
+export const listHandler = (event) => {
   event.preventDefault();
   listLink.style.color = 'blue';
   addBookLink.style.color = 'black';
@@ -14,9 +14,9 @@ export function listHandler(event) {
   booksSection.style.display = 'block';
   addBookSection.style.display = 'none';
   contactSection.style.display = 'none';
-}
+};
 
-export function addBookHandler(event) {
+export const addBookHandler = (event) => {
   event.preventDefault();
   listLink.style.color = 'black';
   addBookLink.style.color = 'blue';
@@ -24,9 +24,9 @@ export function addBookHandler(event) {
   booksSection.style.display = 'none';
   addBookSection.style.display = 'flex';
   contactSection.style.display = 'none';
-}
+};
 
-export function contactHandler(event) {
+export const contactHandler = (event) => {
   event.preventDefault();
   listLink.style.color = 'black';
   addBookLink.style.color = 'black';
@@ -34,4 +34,4 @@ export function contactHandler(event) {
   booksSection.style.display = 'none';
   addBookSection.style.display = 'none';
   contactSection.style.display = 'block';
-}
+};

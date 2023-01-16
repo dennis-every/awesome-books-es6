@@ -29,9 +29,9 @@ export const appendBookToDOM = (book) => {
   });
 };
 
-export function loadBooks() {
+export const loadBooks = () => {
   const booksArray = retrieveData();
   booksArray.forEach((book) => {
     appendBookToDOM(book);
   });
-}
+};

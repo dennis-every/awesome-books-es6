@@ -9,17 +9,17 @@ export default class Book {
     this.id = Math.random();
   }
 
-  static addBook(book) {
+  static addBook = (book) => {
     const newBook = new Book(book.title, book.author);
     newBooksArray = retrieveData();
     newBooksArray.push(newBook);
     storeData(newBooksArray);
     window.location.reload();
-  }
+  };
 
-  static removeBook(book) {
+  static removeBook = (book) => {
     newBooksArray = retrieveData();
     newBooksArray = newBooksArray.filter((e) => e.id !== book.id);
     storeData(newBooksArray);
-  }
+  };
 }

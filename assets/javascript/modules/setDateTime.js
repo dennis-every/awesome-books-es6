@@ -1,5 +1,7 @@
 const dateElement = document.getElementById('date');
 
-export default function setDateTime() {
+const setDateTime = () => {
   dateElement.innerHTML = new Date().toLocaleString();
-}
+};
+
+export default setDateTime;
